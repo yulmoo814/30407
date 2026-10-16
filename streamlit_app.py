@@ -34,7 +34,7 @@ st.markdown(
     .intro {
         position: relative;
         overflow: hidden;
-        padding: clamp(2rem, 6vw, 4.5rem);
+        padding: clamp(1.6rem, 4vw, 3rem);
         border: 1px solid rgba(255, 255, 255, 0.8);
         border-radius: 28px;
         background: linear-gradient(125deg, rgba(255,255,255,.86), rgba(250,245,255,.66));
@@ -70,7 +70,7 @@ st.markdown(
         margin: .65rem 0 .25rem;
         color: #493663;
         font-family: 'Jua', sans-serif;
-        font-size: clamp(2.8rem, 8vw, 5rem);
+        font-size: clamp(2.5rem, 6vw, 4rem);
         font-weight: 400;
         letter-spacing: 0;
         line-height: 1.12;
@@ -136,7 +136,7 @@ st.markdown(
     unsafe_allow_html=True,
 )
 
-intro_text, intro_photo = st.columns([1.5, 0.8])
+intro_text, intro_photo = st.columns([2, 0.7])
 
 with intro_text:
     st.markdown(
@@ -156,7 +156,7 @@ with intro_text:
     )
 
 with intro_photo:
-    st.image("img/unnamed.jpg", use_container_width=True)
+    st.image("img/unnamed.jpg", width=260)
 
 st.markdown(
     '<div class="section-title">저를 소개할게요 💌</div>',
