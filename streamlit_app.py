@@ -42,6 +42,12 @@ st.markdown(
         animation: appear .7s ease-out both;
     }
 
+    [data-testid='stImage'] img {
+        border: 1px solid rgba(255, 255, 255, 0.8);
+        border-radius: 28px;
+        box-shadow: 0 24px 70px rgba(83, 59, 127, 0.16);
+    }
+
     .intro::after {
         content: '✿';
         position: absolute;
@@ -130,21 +136,30 @@ st.markdown(
     unsafe_allow_html=True,
 )
 
-st.markdown(
-    """
-    <section class="intro">
-        <div class="eyebrow">오늘보다 내일 더 반짝이는 사람 ✨</div>
-        <h1>안녕하세요,<br>이유리입니다!</h1>
-        <p class="subtitle">배우고 도전하며 나만의 길을 찾아가는 고등학생이에요. 🌷</p>
-        <div class="tags">
-            <span class="tag">🏫 경복비즈니스고등학교</span>
-            <span class="tag">💻 3학년 IT과</span>
-            <span class="tag">🎧 노래 듣기</span>
-        </div>
-    </section>
+intro_text, intro_photo = st.columns([1.5, 0.8])
 
-    <div class="section-title">저를 소개할게요 💌</div>
-    """,
+with intro_text:
+    st.markdown(
+        """
+        <section class="intro">
+            <div class="eyebrow">오늘보다 내일 더 반짝이는 사람 ✨</div>
+            <h1>안녕하세요,<br>이유리입니다!</h1>
+            <p class="subtitle">배우고 도전하며 나만의 길을 찾아가는 고등학생이에요. 🌷</p>
+            <div class="tags">
+                <span class="tag">🏫 경복비즈니스고등학교</span>
+                <span class="tag">💻 3학년 IT과</span>
+                <span class="tag">🎧 노래 듣기</span>
+            </div>
+        </section>
+        """,
+        unsafe_allow_html=True,
+    )
+
+with intro_photo:
+    st.image("img/unnamed.jpg", use_container_width=True)
+
+st.markdown(
+    '<div class="section-title">저를 소개할게요 💌</div>',
     unsafe_allow_html=True,
 )
 
