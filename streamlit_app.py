@@ -41,6 +41,9 @@ st.markdown(
     [data-testid='stImage'] img {
         border: 1px solid #d5d5d1;
         border-radius: 6px;
+        pointer-events: none;
+        user-select: none;
+        -webkit-user-drag: none;
     }
 
     .eyebrow {
