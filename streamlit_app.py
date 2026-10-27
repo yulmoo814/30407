@@ -82,8 +82,9 @@ st.markdown(
     }
 
     .info-card {
-        min-height: 174px;
+        height: 260px;
         padding: 1.35rem 1.45rem;
+        box-sizing: border-box;
         border: 1px solid var(--line);
         border-radius: 6px;
         background: rgba(255, 255, 255, .82);
@@ -91,6 +92,7 @@ st.markdown(
 
     .info-card .icon { color: #777; font-family: 'DM Sans', sans-serif; font-size: .82rem; font-weight: 700; }
     .info-card h3 { margin: .55rem 0 .4rem; color: var(--ink); font-family: 'Noto Sans KR', sans-serif; font-size: 1.15rem; font-weight: 600; letter-spacing: 0; }
+    .info-card h3 a, .info-card [data-testid='stHeaderActionElements'] { display: none !important; }
     .info-card p { margin: 0; color: var(--muted); line-height: 1.7; }
 
     .note {
@@ -113,7 +115,7 @@ st.markdown(
 
     @media (max-width: 640px) {
         .block-container { padding-top: 1.5rem; }
-        .info-card { min-height: 0; }
+        .info-card { height: auto; }
     }
     </style>
     """,
@@ -126,13 +128,12 @@ with intro_text:
     st.markdown(
         """
         <section class="intro">
-            <div class="eyebrow">ABOUT ME</div>
-            <h1>안녕하세요,<br>이유리입니다!</h1>
-            <p class="subtitle">배우고 도전하며 나만의 길을 찾아가는 고등학생이에요.</p>
+            <div class="eyebrow"></div>
+            <h1>안녕하세요.<br>이유리입니다.</h1>
+            <p class="subtitle">배움과 도전을 통해 저만의 진로를 찾아가고 있습니다.</p>
             <div class="tags">
                 <span class="tag">경복비즈니스고등학교</span>
-                <span class="tag">3학년 IT과</span>
-                <span class="tag">노래 듣기</span>
+                <span class="tag">IT비즈니스과</span>
             </div>
         </section>
         """,
@@ -153,9 +154,10 @@ with first:
     st.markdown(
         """
         <article class="info-card">
-            <div class="icon">01</div>
+            <div class="icon"></div>
             <h3>학교생활</h3>
-            <p>경복비즈니스고등학교 3학년 IT과에서 공부하고 있어요. 새로운 것을 하나씩 배워가는 중입니다.</p>
+            <p>경복비즈니스고등학교 IT비즈니스과 3학년에 재학 중입니다. <br>
+            다양한 지식과 기술을 익히며 꾸준히 성장하고 있습니다.</p>
         </article>
         """,
         unsafe_allow_html=True,
@@ -165,9 +167,10 @@ with second:
     st.markdown(
         """
         <article class="info-card">
-            <div class="icon">02</div>
+            <div class="icon"></div>
             <h3>좋아하는 것</h3>
-            <p>취미는 노래 듣기예요. 좋아하는 음악을 들으면 기분이 좋아지고 에너지도 충전돼요!</p>
+            <p>음악 감상이 취미입니다. <br>
+            좋아하는 음악을 들으며 일상의 여유를 찾고 새로운 에너지를 얻습니다.</p>
         </article>
         """,
         unsafe_allow_html=True,
@@ -177,9 +180,10 @@ with third:
     st.markdown(
         """
         <article class="info-card">
-            <div class="icon">03</div>
+            <div class="icon"></div>
             <h3>앞으로의 꿈</h3>
-            <p>공무원이나 취업을 생각하고 있어요. 저에게 잘 맞는 진로를 찾아 차근차근 준비하고 싶어요.</p>
+            <p>공무원과 취업을 진로 선택지로 고려하고 있습니다. <br>
+            제 적성과 강점을 살릴 수 있는 길을 찾으며 차근차근 준비하고 있습니다.</p>
         </article>
         """,
         unsafe_allow_html=True,
@@ -189,10 +193,10 @@ st.markdown(
     """
     <div class="note">
         <strong>다짐</strong><br>
-        작은 경험도 소중히 여기며, 맡은 일은 책임감 있게 해내는 사람이 되고 싶어요.
-        앞으로의 저를 따뜻하게 지켜봐 주세요!
+        작은 경험에서도 배우는 자세를 잃지 않고, 맡은 일은 책임감 있게 완수하겠습니다.<br>
+        꾸준히 노력하며 한 걸음씩 성장해 나가겠습니다.
     </div>
-    <div class="footer">Yuri's introduction · 오늘도 좋은 하루 보내세요</div>
+    <div class="footer"></div>
     """,
     unsafe_allow_html=True,
 )
